@@ -9,5 +9,5 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
-
+    $router->resource('/sakila/films', 'Sakila\FilmController');
 });
