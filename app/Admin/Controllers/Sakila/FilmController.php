@@ -4,8 +4,8 @@ namespace App\Admin\Controllers\Sakila;
 
 use App\Models\Sakila\Category;
 use App\Models\Sakila\Film;
-
 use App\Models\Sakila\Language;
+
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
@@ -89,7 +89,7 @@ class FilmController extends Controller
                 return join('&nbsp;', $categories);
             });
 
-            $options = ['G','PG','PG-13','R','NC-17'];
+            $options = ['G', 'PG', 'PG-13', 'R', 'NC-17'];
             $grid->rating()->editable('select', array_combine($options, $options));
             $grid->special_features();
 
@@ -114,7 +114,7 @@ class FilmController extends Controller
     {
         return Admin::form(Film::class, function (Form $form) {
 
-            $form->display('id', 'ID');
+            y('id', 'ID');
 
             $form->text('title');
             $form->textarea('description');
@@ -125,10 +125,10 @@ class FilmController extends Controller
             $form->decimal('rental_rate');
             $form->decimal('replacement_cost');
 
-            $options = ['G','PG','PG-13','R','NC-17'];
+            $options = ['G', 'PG', 'PG-13', 'R', 'NC-17'];
             $form->select('rating')->options(array_combine($options, $options))->default('G');
 
-            $options = ['Trailers','Commentaries','Deleted Scenes','Behind the Scenes'];
+            $options = ['Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes'];
             $form->multipleSelect('special_features')->options(array_combine($options, $options));
 
             $form->multipleSelect('categories')->options(Category::all()->pluck('name', 'id'));
