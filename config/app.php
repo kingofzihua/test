@@ -180,7 +180,7 @@ return [
 
         Encore\Admin\Providers\AdminServiceProvider::class,// laravel-admin
 
-        Kingofhua\OSS\AliyunOssFilesystemServiceProvider::class,//aliyun OSS
+        Kingofzihua\OSS\AliyunOssFilesystemServiceProvider::class,//aliyun OSS
     ],
 
     /*
