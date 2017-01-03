@@ -17,8 +17,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-Route::group(['prefix' => 'project'], function () {
-    Route::get('users', function ()    {
-    });
-});
