@@ -413,18 +413,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kingofzihua/project.git",
-                "reference": "0aa0cf5fcc1eec3135bb0b377040b55a973f7d30"
+                "reference": "3203df4881a96416c76798b2550674ec8543dee4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/kingofzihua/project/0aa0cf5fcc1eec3135bb0b377040b55a973f7d30.zip",
-                "reference": "0aa0cf5fcc1eec3135bb0b377040b55a973f7d30",
+                "url": "https://packagist.phpcomposer.com/files/kingofzihua/project/3203df4881a96416c76798b2550674ec8543dee4.zip",
+                "reference": "3203df4881a96416c76798b2550674ec8543dee4",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Kingofzihua\\project\\": "src/"
+                    "Kingofzihua\\Project\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -438,7 +438,7 @@
                 }
             ],
             "homepage": "https://github.com/kingofhua/",
-            "time": "2016-12-30 03:50:22"
+            "time": "2017-01-03 10:50:01"
         },
         {
             "name": "kingofzihua/set_aliyunoss_storage",
