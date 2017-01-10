@@ -21,8 +21,11 @@ use Encore\Admin\Widgets\Table;
 
 class HomeController extends Controller
 {
+
     public function index()
     {
+
+//    dump(Admin::user());
         return Admin::content(function (Content $content) {
 
             $content->header('Dashboard');
