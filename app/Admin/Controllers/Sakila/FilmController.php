@@ -90,7 +90,9 @@ class FilmController extends Controller
             });
 
             $options = ['G', 'PG', 'PG-13', 'R', 'NC-17'];
-            $grid->rating()->editable('select', array_combine($options, $options));
+            $optionss = ['G', 'PG', 'PG-13', 'R', 'NC-17'];
+
+            $grid->rating()->editable('select', array_combine($optionss, $options));
             $grid->special_features();
 
             $grid->created_at();
@@ -114,7 +116,7 @@ class FilmController extends Controller
     {
         return Admin::form(Film::class, function (Form $form) {
 
-            y('id', 'ID');
+            $form->display('id', 'ID');
 
             $form->text('title');
             $form->textarea('description');

@@ -183,10 +183,6 @@ return [
         Kingofzihua\OSS\AliyunOssFilesystemServiceProvider::class,//aliyun OSS
         Kingofzihua\Project\Providers\TestServiceProvider::class,//aliyun OSS
         Kingofzihua\Tool\Providers\ToolServiceProvider::class,
-
-        Overtrue\LaravelWechat\ServiceProvider::class,
-        Guo\Wechat\Providers\AppServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
