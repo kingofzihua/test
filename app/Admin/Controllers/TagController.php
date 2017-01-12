@@ -73,11 +73,17 @@ class TagController extends Controller
     {
         return Admin::grid(Tag::class, function (Grid $grid) {
 
-            $grid->id('ID')->sortable();
-            $grid->name('标签名');
+            $grid->id('ID');
+            $grid->name('标签名')->editable();
+            $states = [
+                'on' => ['value' => '1', 'text' => 'ON', 'color' => 'success'],
+                'off' => ['value' => '0', 'text' => 'OFF', 'color' => 'danger'],
+            ];
+            $grid->act('是否启用')->switch($states);
             $grid->created_at('创建时间');
             $grid->updated_at('最后修改时间');
             $grid->disableBatchDeletion();
+            $grid->view("admin.grid.table");
         });
     }
 
@@ -89,11 +95,12 @@ class TagController extends Controller
     protected function form()
     {
         return Admin::form(Tag::class, function (Form $form) {
-
-//            $form->display('id', 'ID');
-            $form->text('name');
-//            $form->display('created_at', 'Created At');
-//            $form->display('updated_at', 'Updated At');
+            $form->text('name', '标签名');
+            $states = [
+                'on' => ['value' => '1', 'text' => '是'],
+                'off' => ['value' => '0', 'text' => '否'],
+            ];
+            $form->switch("act", "是否启用")->states($states);
         });
     }
 }

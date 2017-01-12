@@ -39,8 +39,8 @@ return [
         'disk' => 'oss',
 
         'directory'  => [
-            'image'  => 'image',
-            'file'   => 'file',
+            'image'  => 'test',
+            'file'   => 'test/file',
         ],
 
         'host' => 'http://kingofzihua.oss-cn-shanghai.aliyuncs.com/',

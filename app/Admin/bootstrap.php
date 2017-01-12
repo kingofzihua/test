@@ -17,4 +17,7 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+use Encore\Admin\Form;
+//移除map标签
+Form::forget('map');
 
