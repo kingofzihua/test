@@ -18,6 +18,16 @@
  *
  */
 use Encore\Admin\Form;
+
 //移除map标签
 Form::forget('map');
 
+//集成富文本编辑器wangEditor
+use App\Admin\Extensions\WangEditor;
+
+Form::extend('wangEditor', WangEditor::class);
+
+//扩展一个基于codemirror的PHP代码编辑器
+use App\Admin\Extensions\PHPEditor;
+
+Form::extend('PHPEditor', PHPEditor::class);

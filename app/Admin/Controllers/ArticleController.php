@@ -114,7 +114,8 @@ class ArticleController extends Controller
             $form->image("image", "图片");
             $form->select("auth", "作者")->options([1 => 'admin', 2 => 'test']);
             $form->multipleSelect('tag', "标签")->options(Tag::all()->pluck('name', 'id'));
-            $form->editor("content", "文章内容");
+            $form->PHPEditor("content","php代码");
+//            $form->wangEditor("content", "文章内容");
             $states = [
                 'on' => ['value' => '1', 'text' => '是'],
                 'off' => ['value' => '0', 'text' => '否'],
