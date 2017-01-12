@@ -19,17 +19,17 @@ class WangEditor extends Field
     public function render()
     {
         $this->script = <<<EOT
-
+            var _token=$("input[name=_token]").val();
             var editor = new wangEditor('{$this->id}');
             // 上传图片（举例）
             editor.config.uploadImgUrl = '/api/upload';
 
             //上传文件的name
-            editor.config.uploadImgFileName = 'editor'
+            editor.config.uploadImgFileName = 'editor';
 
             // 配置自定义参数（举例）
             editor.config.uploadParams = {
-                token: 'abcdefg',
+                token: _token,
                 user: 'wangfupeng1988'
             };
         
