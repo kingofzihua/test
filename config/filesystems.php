@@ -50,7 +50,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => public_path(),
             'visibility' => 'public',
         ],
 
@@ -63,11 +63,11 @@ return [
         ],
 
         'oss' => [
-            'driver'     => 'oss',
-            'access_id'  =>  env('OSS_ACCESS_KEY_ID'),
-            'access_key' =>  env('OSS_ACCESS_KEY_SECRET'),
-            'bucket'     =>  env('OSS_BUCKET'),
-            'endpoint'   =>  env('OSS_SERVER'),
+            'driver' => 'oss',
+            'access_id' => env('OSS_ACCESS_KEY_ID'),
+            'access_key' => env('OSS_ACCESS_KEY_SECRET'),
+            'bucket' => env('OSS_BUCKET'),
+            'endpoint' => env('OSS_SERVER'),
             // eg. oss-cn-beijing.aliyuncs.com !!without 'http://' in OSS SDK 2.0+
         ],
     ],

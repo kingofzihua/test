@@ -21,6 +21,7 @@ use Encore\Admin\Form;
 
 //移除map标签
 Form::forget('map');
+Form::forget('editor');
 
 //集成富文本编辑器wangEditor
 use App\Admin\Extensions\WangEditor;

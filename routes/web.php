@@ -14,6 +14,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
+/**
+ * 测试路由
+ */
+Route::group(['prefix' => 'test'], function () {
+    Route::get('/upload', 'UploadController@upload');
+});
