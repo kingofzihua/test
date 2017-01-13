@@ -111,9 +111,9 @@ class ArticleController extends Controller
     {
         return Admin::form(Article::class, function (Form $form) {
             $form->text("title", "标题");
-            $form->image("image", "图片");
+            $form->image("image", "图片")->uniqueName();
             $form->select("auth", "作者")->options([1 => 'admin', 2 => 'test']);
-            $form->multipleSelect('tag', "标签")->options(Tag::all()->pluck('name', 'id'));
+            $form->multipleSelect('tag', "标签")->options(Tag::where('act', '1')->get()->pluck('name', 'id'));
 //            $form->PHPEditor("content","php代码");
             $form->wangEditor("content", "文章内容");
             $states = [
